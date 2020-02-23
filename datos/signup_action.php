@@ -13,6 +13,7 @@
 
 	$userName = $_POST['userName'];
 	$email = $_POST['email'];
+	// password_hash se implementa lineas mas abajo
 	/*$pwd = md5($_POST['pwd']);
 	$pwdConfirm = md5($_POST['pwdConfirm']);*/
 

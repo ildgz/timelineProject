@@ -14,8 +14,10 @@ class Dbh {
   public function connect() {
 
      $this->servername = "localhost";
-     $this->username = "root";
-     $this->password = "123root";
+     //$this->username = "root";
+     //$this->password = "123root";
+     $this->username = "adm1n";
+     $this->password = "123adm0n";
      $this->dbname = "timeline";
      $this->charset = "utf8mb4"; // mejor que utf8, no es necesario cambiar el cotejamiento en  la BD. Permite: áéíóú ñ directamente
      $this->options = [

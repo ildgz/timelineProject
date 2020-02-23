@@ -6,6 +6,7 @@
    if (isset ($_POST['userName'], $_POST['password'])  && $_POST['userName']!="" and $_POST['password']!="") {
 
       $userName = $_POST['userName'];
+      // en favor de password_hash en signup_action.php:
       //$pwd = md5($_POST['password']);
       $pwd = $_POST['password'];
       

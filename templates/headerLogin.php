@@ -54,7 +54,7 @@
           <a class="nav-link disabled" href="#" tabindex="-2" aria-disabled="true">Search</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/stamp/private_files/logout.php">Log out</a>
+          <a class="nav-link" href="/stamp/private_files/logout.php" onclick="return confirm('Are you sure you want to Logout?')">Log out</a>
         </li>
       </ul>
     </div>

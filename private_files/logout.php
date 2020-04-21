@@ -10,7 +10,7 @@
 
    echo "<script type='text/javascript'>
 		alert('$message');
-		location.href='../index.php';
+                location.href='../index.php';
 	      </script>";
 
 ?>

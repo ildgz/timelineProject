@@ -3,7 +3,8 @@
    include_once("../lib/db.php");
    include_once("../lib/user.php");
 
-   if (isset ($_POST['userName'], $_POST['password'])  && $_POST['userName']!="" and $_POST['password']!="") {
+
+   if (isset($_POST['userName'], $_POST['password'])  && (trim($_POST['userName']) && trim($_POST['password']))) {
 
       $userName = $_POST['userName'];
       // en favor de password_hash en signup_action.php:
@@ -14,13 +15,15 @@
       $baseDatos->connect();
 
       $nomClave = new User;
-      $nomClave->getUsrReg($userName,$pwd); // match userName and pwd?
-	print($nomClave->$pwd);
-    }
+      $nomClave->getUsrReg($userName,$pwd); // match userName and pwd? 
+	
+
+      header('Location: ../private_files/dashboard.php');
+	
+    } else { 
+		header('Location: ../public_files/login.php');
+	}
 
     $baseDatos = null;
     $nomClave = null;
-
-    header('Location: ../private_files/dashboard.php');
-
 ?>

@@ -62,13 +62,14 @@
 	    $_SESSION['ID'] = $_COOKIE['PHPSESSID'];
 
 	    header('Location: ../private_files/dashboard.php'); // private menu
+	    
 	    } // password_verify
 
 	 } else {
 
 		// rowCount() is false	      
 		echo '<a href="../public_files/login.php">Error: user or pwd or both are wrong!!!</a>';
-	      
+	        
 	 }
 
 	 return;

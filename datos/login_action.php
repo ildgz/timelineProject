@@ -4,7 +4,7 @@
    include_once("../lib/user.php");
 
 
-   if (isset($_POST['userName'], $_POST['password'])  && (trim($_POST['userName']) && trim($_POST['password']))) {
+   if ( isset($_POST['userName'], $_POST['password']) && (!empty($_POST['userName']) && !empty($_POST['password']) )) {
 
       $userName = $_POST['userName'];
       // en favor de password_hash en signup_action.php:

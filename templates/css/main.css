@@ -123,7 +123,16 @@ button.mybtn:focus {
     background: #de615e; 
 }
 
-/*LOGIN REDES SOCIALES*/
+.error {
+    background: orangered;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+  }
+
+
+
+  /*LOGIN REDES SOCIALES*/
 
 .mysocial-login {
     margin-top: 35px;
@@ -169,7 +178,3 @@ button.mybtn:focus {
     h1, h2 { font-size: 32px; }
 
 }
-
-
-
-

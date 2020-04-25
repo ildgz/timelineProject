@@ -5,7 +5,7 @@
 
 ?>
 
- <div class="my-content" >
+ <div class="my-content" id="micontenido">
         <div class="container" > 
 
             <div class="row">
@@ -31,17 +31,18 @@
                       <div class="myform-bottom">
                         <form role="form" action="../datos/login_action.php" method="post" class="" id="my-form">
                           <div class="form-group">
-                              <input type="text" name="userName" placeholder="username" class="form-control" id="form-username" require="required">
+                              <input type="text" name="userName" placeholder="username" class="form-control" id="form-username">
                           </div>
                           <div class="form-group">
-                              <input type="password" name="password" placeholder="password" class="form-control" id="form-password" require="required">
+                              <input type="password" name="password" placeholder="password" class="form-control" id="form-password">
                           </div>
                           <button type="submit" class="mybtn">Log in</button>
                         </form>
                       </div>
                   </div>
             </div>
-
+            
+            <!-- ingresa por redes sociales -->
             <!-- <div class="row">
                  <div class="col-sm-12 mysocial-login">
                     <h3>...ingresa también por:</h3>
@@ -62,4 +63,5 @@
         </div>
     </div>
 
-    <!-- <script src="/stamp/templates/js/mensajes.js"></script> -->
+    <!-- mensajes de error -->
+    <script src="../templates/js/mensajes.js"></script> 

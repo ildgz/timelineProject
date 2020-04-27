@@ -42,8 +42,9 @@
 	 //$stmt->execute([$userName, $pwd]);
 	 $stmt->execute([$userName]);
 
-
-	 if ($stmt->rowCount()) {
+	// AQUÍ ES DONDE HACE FALTA LEER TODO LO RELATOIVO A  class PDOStatement
+	
+	if (!empty($stmt->rowCount())) {
 
 	    // trae todo el registro
 	    $userReg = $stmt->fetch(PDO::FETCH_OBJ);

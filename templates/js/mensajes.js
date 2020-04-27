@@ -12,7 +12,7 @@ function onSubmit(e) {
   
   if(usernameInput.value === '' || passwordInput.value === '') {
     // alert('Please enter all fields');
-    msg.classList.add('error'); // NO FUNCIONA
+    msg.classList.add('error'); // sólo muestra cambio de color una vez
     msg.innerHTML = 'Please enter all fields';
     //msg.textContent = 'Please enter all fields';
 

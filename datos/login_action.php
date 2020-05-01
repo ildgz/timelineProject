@@ -11,15 +11,14 @@
 
    if ( (!empty($usuario) && !empty($pwd) )) {
 
-      
+      // new object database connection
       $baseDatos = new Dbh;
       $baseDatos->connect();
 
+      // new object user
       $nomClave = new User;
-      $nomClave->getUsrReg($usuario,$pwd); // match userName and pwd? 
+      $nomClave->getUsrReg($usuario,$pwd); // match user and pwd ? 
 	
-
-      header('Location: ../private_files/dashboard.php');
 	
     } else { 
     // faltan datos

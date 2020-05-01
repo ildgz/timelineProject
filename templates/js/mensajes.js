@@ -12,9 +12,8 @@ function onSubmit(e) {
   
   if(usernameInput.value === '' || passwordInput.value === '') {
     // alert('Please enter all fields');
-    msg.classList.add('error'); // sólo muestra cambio de color una vez
+    msg.classList.add('error'); // sólo muestra cambio de color al cargarse login.php y dar incompletos
     msg.innerHTML = 'Please enter all fields';
-    //msg.textContent = 'Please enter all fields';
 
     // Remove error after 3 seconds
     setTimeout(() => msg.remove(), 3000);
@@ -40,4 +39,3 @@ function onSubmit(e) {
 // RESUELTO 24042020 cambiando const myForm por var
 
 // PROBLEMA si faltan campos sólo muestra el mensaje una vez
-// PROBLEMA entra aunque el usuario no exista ERROR DE VALIDACION EN user.php

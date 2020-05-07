@@ -3,6 +3,9 @@
    // find user session
    session_start();
 
+   // la sesion que quiero vaciar
+   unset($_SESSION['userName']);
+
    // to finish user session
    session_destroy();
 
@@ -10,7 +13,7 @@
 
    echo "<script type='text/javascript'>
 		alert('$message');
-                location.href='../index.php';
+                document.location.href='../index.php';
 	      </script>";
 
 ?>

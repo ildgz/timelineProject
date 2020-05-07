@@ -1,5 +1,5 @@
 <?php
-   
+
 class User extends Dbh {
 
     // seting registered user	
@@ -32,7 +32,7 @@ class User extends Dbh {
 
     // geting registered user
     public function getUsrReg($userName,$pwd) {
-	 
+		
 	  // Users es la tabla de los usuarios registrados Common by default (sin privilegios administrativos)
 	  //$sql = "SELECT * FROM Users WHERE (userName=? AND pwd=?)";
 	  $sql = "SELECT * FROM Users WHERE (userName=?)";
@@ -53,21 +53,26 @@ class User extends Dbh {
 	    // userReg como un arreglo; la alternativa: SESSION como un arreglo bidimensional (JSON)
 	    $_SESSION['login'] = "OK";
 	    $_SESSION['userName'] = $userReg->userName; // to say welcome user on dashboard
-	    $_SESSION['idUser'] = $userReg->idUser;
-	    $_SESSION['rol'] = $userReg->rol; // admin or custom
+	    $_SESSION['idUser'] = $userReg->idUser; 	// for validation purposes
+	    $_SESSION['rol'] = $userReg->rol; 			// admin or custom
 
 	    $_SESSION['ID'] = $_COOKIE['PHPSESSID'];
 
-	    header('Location: ../private_files/dashboard.php'); // private menu
+	    header('Location: ../private_files/dashboard.php'); // login successfully: private menu
 	    
 	    } // password_verify
 		
 	    else {
 
 		// rowCount() is false	      
-		echo '<a href="../public_files/login.php">Error: user or pwd or both are wrong!!!</a>';
-	        
-	 	}
+		//echo '<a href="../public_files/login.php">Error: user or pwd or both are wrong!!!</a>';
+
+		// considerar este caso para AJAX o JS 
+		include("../templates/header.php");		
+		echo '<p class="error"><a href="../public_files/login.php">Error Login: user or password or both are wrong!!!</a></p>';
+		// <script src="../templates/js/noLogin.js"></script>
+		
+	}
 
 		 return;
     }

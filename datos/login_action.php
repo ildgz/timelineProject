@@ -21,7 +21,7 @@
 	
 	
     } else { 
-    // faltan datos
+      // faltan datos
       header('Location: ../public_files/login.php');
 	}
 

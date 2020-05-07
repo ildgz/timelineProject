@@ -29,7 +29,8 @@
                           </div>
                       </div>
                       <div class="myform-bottom">
-                        <form role="form" action="../datos/login_action.php" method="post" class="" id="my-form">
+                        <!-- <form role="form" action="../datos/login_action.php" method="post" class="" id="my-form"> -->
+                        <form action="../datos/login_action.php" method="post" name="form" class="" id="my-form">
                           <div class="form-group">
                               <input type="text" name="userName" placeholder="username" class="form-control" id="form-username">
                           </div>

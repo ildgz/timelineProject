@@ -12,7 +12,7 @@ body {
 .main-header {
   position: relative;
   background-size: cover;
-  min-height 700px;
+  min-height: 700px;
 }
 
 .background-overlay {
@@ -126,8 +126,10 @@ button.mybtn:focus {
 .error {
     background: orangered;
     color: #fff;
-    padding: 5px;
-    margin: 5px;
+    /* padding: 5px;
+    margin: 5px;*/
+    padding: 8px;
+    display: block;
   }
 
 
